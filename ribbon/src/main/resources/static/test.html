@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "app">
+    <appp :title="msg"></appp>
+
+</div>
+<script src="vue.js"></script>
+    <script>
+        //局部组件
+        const appp = {
+            template: "<h1> {{title}}}</h1>",
+            props: ['title']
+        };
+        const app = new Vue({
+            el: "#app",
+            data:{
+                msg: "大家好",
+                },
+            components: {
+                appp,
+            }
+        });
+
+
+    </script>
+</body>
+</html>

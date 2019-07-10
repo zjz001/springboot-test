@@ -1,0 +1,6 @@
+server:
+  port: 9600
+zuul:
+  prefix: /rest
+  routes:
+    consumer-service: /user/**
